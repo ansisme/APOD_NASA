@@ -31,7 +31,15 @@ const handleData=(event)=>{
   return (
   <>
     <Header/>
-    <Card />
+    <div className="nasadata">
+         <h2>{nasadata.title}</h2><br></br>
+         <h4>{nasadata.date} </h4>
+        <img src={nasadata.url} alt="nasa" />
+        <p>{nasadata.explanation}</p>
+        <p>{nasadata.thumnail_url}</p>
+    
+
+        </div>
   </>
     
   );
