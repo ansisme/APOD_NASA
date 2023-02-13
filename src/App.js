@@ -17,7 +17,6 @@ useEffect(()=>{
       }
    getNasaData();
    console.log(nasadata);
-
 }, []);
 
 if(!nasadata){
