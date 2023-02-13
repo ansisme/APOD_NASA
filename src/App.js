@@ -1,24 +1,37 @@
 import React,{useState,useEffect} from "react";
 import Header from './components/Header/Header';
 import axios from 'axios';
+import Card from './components/Card/Card';
 const App=()=> {
 const [nasadata, setNasadata] = useState([]);
+const [loading, setLoading] = useState(false);
 const api = process.env.NASA_API_KEY;
 useEffect(()=>{ 
+  getNasaData();
    async function getNasaData(){
-       const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${api}&count=1&media_type=image`)
-       setNasadata(res.data);
-       console.log(res.data);
-}
+    setLoading(true);
+       const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=0sjtOnurfaDY11BDkgjYrNOcaYstUZFeOyZlbImI`)
+       const data = await res.json();
+       setNasadata(data);
+       setLoading(false);
+      }
    getNasaData();
-})
+   console.log(nasadata);
+
+}, []);
+
+if(!nasadata){
+  return (
+    <h1>no data</h1>
+  )
+}
+const handleData=(event)=>{
+  setNasadata(event.target.value);
+};
   return (
   <>
     <Header/>
-    <img src={nasadata.url} alt="nasa" />
-    <p>{nasadata.explanation}</p>
-    <h6>{nasadata.date}</h6>
-    <p>{nasadata.thumnail_url}</p>
+    <Card />
   </>
     
   );
