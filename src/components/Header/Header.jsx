@@ -10,7 +10,7 @@ const Header = ()=>{
     const[openDrawer,setOpenDrawer]= useState(false);
     return (
         <>
-            <AppBar position="static">
+            <AppBar position="static" className={classes.appbar}>
                 <Toolbar>
                 <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
                             <MenuIcon />
@@ -20,15 +20,15 @@ const Header = ()=>{
                                 onClose={() => setOpenDrawer(false)}
                             >
                             
-                                <List>
+                                <List className={classes.list}>
                                     <ListItem onClick={()=>setOpenDrawer(false)}>
-                                        <ListItemText>
-                                            <a href = "https://github.com/ansisme" target="_blank" rel="noreferrer">My Github</a>
+                                        <ListItemText >
+                                            <a className={classes.list} href = "https://github.com/ansisme" target="_blank" rel="noreferrer">My Github</a>
                                             {/* <Link to={{pathname:"https://github.com"}} atrget = "_blank">About</Link> */}
                                         </ListItemText>
                                     </ListItem>
                               
-                                     <ListItem onClick={()=>setOpenDrawer(false)}>
+                                     <ListItem onClick={()=>setOpenDrawer(false)} >
                                         <ListItemText>
                                         <a href = "https://linkedin.com/in/anshul-s-4246a8223" target="_blank" rel="noreferrer">My LinkedIn</a>
 
@@ -48,11 +48,11 @@ const Header = ()=>{
                                  
                         </Drawer>
                         <Grid>
-                            <Typography variant="h6">
+                            <Typography className ={classes.text} variant="h6">
                                 Nasa data fetching from Nasa API
                             </Typography>
                         </Grid>
-                        <Button color="inherit">Login</Button>
+                        {/* <Button color="inherit">Login</Button> */}
                     </Toolbar>
             </AppBar>
             </>
