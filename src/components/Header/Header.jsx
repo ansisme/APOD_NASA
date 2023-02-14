@@ -1,6 +1,6 @@
 import React ,{useState }from 'react';
 import { AppBar, Toolbar, Grid,Typography,IconButton,List,ListItem,ListItemText,Drawer } from "@material-ui/core";
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import MenuIcon from "@material-ui/icons/Menu";
 import useStyles from './styles';
 // import {BrowserRouter as Router,Routes,Link, Route} from 'react-router-dom';
@@ -10,8 +10,8 @@ const Header = ()=>{
     const[openDrawer,setOpenDrawer]= useState(false);
     return (
         <>
-            <AppBar position="static" className={classes.appbar}>
-                <Toolbar>
+            <AppBar position="static" className={classes.appbar} >
+                <Toolbar className = 'font-link'>
                 <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
                             <MenuIcon />
                         </IconButton>
@@ -20,22 +20,22 @@ const Header = ()=>{
                                 onClose={() => setOpenDrawer(false)}
                             >
                             
-                                <List className={classes.list}>
+                                <List >
                                     <ListItem onClick={()=>setOpenDrawer(false)}>
                                         <ListItemText >
-                                            <a className={classes.list} href = "https://github.com/ansisme" target="_blank" rel="noreferrer">My Github</a>
+                                            <a href = "https://github.com/ansisme" target="_blank" rel="noreferrer">My Github</a>
                                             {/* <Link to={{pathname:"https://github.com"}} atrget = "_blank">About</Link> */}
                                         </ListItemText>
                                     </ListItem>
                               
-                                     <ListItem onClick={()=>setOpenDrawer(false)} >
+                                     <ListItem onClick={()=>setOpenDrawer(false)}  >
                                         <ListItemText>
                                         <a href = "https://linkedin.com/in/anshul-s-4246a8223" target="_blank" rel="noreferrer">My LinkedIn</a>
 
                                             {/* <Link to="https://github.com">About</Link> */}
                                         </ListItemText>
                                     </ListItem>
-                                    <ListItem onClick={()=>setOpenDrawer(false)}>
+                                    <ListItem onClick={()=>setOpenDrawer(false)} >
                                         <ListItemText>
                                         <a href = "https://api.nasa.gov/" target="_blank" rel="noreferrer">Generate your own NASA API key</a>
 
@@ -47,8 +47,8 @@ const Header = ()=>{
                                 </List>
                                  
                         </Drawer>
-                        <Grid>
-                            <Typography className ={classes.text} variant="h6">
+                        <Grid >
+                            <Typography  variant="h6">
                                 Nasa data fetching from Nasa API
                             </Typography>
                         </Grid>

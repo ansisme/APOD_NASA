@@ -34,12 +34,10 @@ const handleData=(event)=>{
     <div className="nasadata">
          <h2>{nasadata.title}</h2><br></br>
          <h4>{nasadata.date} </h4>
-        <img src={nasadata.url} alt="nasa" />
+        <img src={nasadata.url} alt="nasa"  />
         <p>{nasadata.explanation}</p>
         <p>{nasadata.thumnail_url}</p>
-        {/* <p style="font-size: 16px;">This is a paragraph with inline styles.</p> */}
-
-        {/* <p style="font-size: 2px">Copyright @Anshul 2023</p> */}
+        <h5>Copyright @Anshul 2023</h5>
       </div>
       
   </>

@@ -47,5 +47,9 @@
   "main": "index.js",
   "author": "",
   "license": "ISC",
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "stylelint": "^15.1.0",
+    "stylelint-config-standard": "^30.0.1"
+  }
 }

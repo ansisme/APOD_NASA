@@ -10,15 +10,18 @@ export default makeStyles((theme) => ({
     appbar: {
         backgroundColor: "#242424",
         fontSize: 20,
-
+        fontFamily: "Poppins",
     },
     text: {
-        fontFamily: 'Poppins',
-        textAlign: 'center',
-        marginRight: 20
-    },
-    list: {
-        color: 'white'
-    }
 
+        textAlign: 'center',
+        marginLeft: 20,
+        fontSize: 18,
+    },
+
+    list: {
+        backgroundColor: "black",
+        textColor: "white",
+        fontFamily: "Poppins",
+    }
 }))

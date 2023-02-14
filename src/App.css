@@ -50,7 +50,7 @@
     color: white;
 }
 
-.nasadata-img {
+.nasaimg {
     display: 'flex';
     flex-direction: column;
     alignItems: 'center';
@@ -60,12 +60,17 @@
     margin: '8px';
     maxWidth: '300px';
     width: '100%';
-    marginBottom: '16px'
+    marginBottom: '16px';
+    border: '2px solid white';
 }
 
-.nasadata-h2 {
-    font-size: '1.5rem';
-    margin: '8px 0';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
 }
 
 p {
