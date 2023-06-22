@@ -1,10 +1,8 @@
 import React ,{useState }from 'react';
 import { AppBar, Toolbar, Grid,Typography,IconButton,List,ListItem,ListItemText,Drawer } from "@material-ui/core";
-// import Button from '@material-ui/core/Button';
 import MenuIcon from "@material-ui/icons/Menu";
 import useStyles from './styles';
-// import {BrowserRouter as Router,Routes,Link, Route} from 'react-router-dom';
-// import {Switch} from 'react-router-dom';
+
 const Header = ()=>{
     const classes = useStyles();
     const[openDrawer,setOpenDrawer]= useState(false);
@@ -59,33 +57,6 @@ const Header = ()=>{
     );
 }
 
-
-                                    
-// function Drawercomponent(){
-//     const[openDrawer,setOpenDrawer]= useState(false);
-//     return (
-
-//         <List>
-//             <ListItem onClick={()=>setOpenDrawer(false)}>
-//                 <ListItemText>
-//                     {/* <a href = "https://github.com/ansisme">My Github</a> */}
-//                     <Link to={{pathname:"/https://github.com"}} target = "_blank">About</Link>
-//                 </ListItemText>
-//                 </ListItem>
-
-//             {/* <ListItem onClick={()=>setOpenDrawer(false)}>
-//                 <ListItemText>
-//                     <Link to="https://github.com">About</Link>
-//                 </ListItemText>
-//             </ListItem>
-//             <ListItem onClick={()=>setOpenDrawer(false)}>
-//                 <ListItemText>
-//                     <Link to="https://api.nasa.gov/">Generate your own API key</Link>
-//                 </ListItemText> 
-//             </ListItem> */}
-//         </List>
-//     )
-// }
 export default Header;
 
 
